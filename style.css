@@ -1,0 +1,116 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Boldonse", monospace;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+.player-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player1 {
+    background-color: #a84bff;
+    color: white;
+}
+
+.player2 {
+    background-color: #00b4ff;
+    color: black;
+}
+
+.number {
+    font-size: 8em;
+    margin: 20px 0;
+}
+
+.button-area {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.icon {
+    font-size: 4em;
+    user-select: none;
+}
+
+.reset-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px; /* Increased diameter */
+    height: 50px; /* Increased diameter */
+    border-radius: 50%;
+    background-color: #f44336; /* Material Design red */
+    border: 2px solid black; /* Solid black border */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.reset-button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reset-popover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: white;
+    padding: 30px; /* Increased padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Material shadow */
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+    text-align: center;
+    width: 300px; /* Increased width */
+}
+
+.reset-popover.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.reset-popover p {
+    font-size: 1.5em; /* Larger text */
+    margin-bottom: 20px;
+}
+
+.popover-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.popover-buttons button {
+    padding: 15px 30px; /* Larger buttons */
+    margin: 0 10px;
+    font-size: 1.2em; /* Larger button text */
+    border: none;
+    border-radius: 4px;
+    background-color: #2196f3; /* Material blue */
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Material button shadow */
+    transition: background-color 0.3s ease;
+}
+
+.popover-buttons button:hover {
+    background-color: #1976d2; /* Darker blue on hover */
+}

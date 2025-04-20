@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Number Controller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="player-column player1">
+            <div class="button-area plus-button" onclick="changeNumber(1, 1)">
+                <span class="icon">+</span>
+            </div>
+            <span id="number1" class="number">0</span>
+            <div class="button-area minus-button" onclick="changeNumber(1, -1)">
+                <span class="icon">-</span>
+            </div>
+        </div>
+        <div class="player-column player2">
+            <div class="button-area plus-button" onclick="changeNumber(2, 1)">
+                <span class="icon">+</span>
+            </div>
+            <span id="number2" class="number">0</span>
+            <div class="button-area minus-button" onclick="changeNumber(2, -1)">
+                <span class="icon">-</span>
+            </div>
+        </div>
+        <div id="resetButton" class="reset-button" onclick="showResetPopover()"></div>
+        <div id="resetPopover" class="reset-popover">
+            <p>Reset?</p>
+            <div class="popover-buttons">
+                <button onclick="resetScores()">Yes</button>
+                <button onclick="hideResetPopover()">No</button>
+                <button id="fullscreenBtn">&#x26F6;</button>
+            </div>
+            <div style='text-align:center; margin-top: 15px; font-size: 0.9em; vertical-align: baseline; font-family: monospace;'>Made with &#9829; by @Rules of Villainy</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
